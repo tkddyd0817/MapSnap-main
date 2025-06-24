@@ -10,7 +10,7 @@ import useLocationStore from "@/store/useLocationStore";
 import { clsx } from "clsx";
 import Link from "next/link";
 import { useEffect, useRef, type Dispatch, type SetStateAction } from "react";
-import { BottomSheet } from "react-spring-bottom-sheet";
+// import { BottomSheet } from "react-spring-bottom-sheet";
 import "react-spring-bottom-sheet/dist/style.css";
 
 type PlaceListProps = {
@@ -141,7 +141,7 @@ const PlaceList = ({
       {/* 모바일용 리스트 */}
       {isMobile && (
         <>
-          <BottomSheet
+          {/* <BottomSheet
             open={true}
             aria-labelledby="place-list-title"
             snapPoints={({ maxHeight }) => {
@@ -166,8 +166,8 @@ const PlaceList = ({
             role="dialog"
             aria-modal="true"
             aria-describedby="place-list-description"
-          >
-            <div
+          > */}
+            {/* <div
               ref={mobileListRef}
               role="region"
               aria-label="검색된 장소 목록"
@@ -236,7 +236,7 @@ const PlaceList = ({
                 </div>
               )}
             </div>
-          </BottomSheet>
+          </BottomSheet> */}
 
           <div
             className="absolute bottom-72 right-4 z-10"

@@ -1,22 +1,21 @@
-
 import KakaoMap from "@/app/map/_components/KakaoMap";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "MapSnap",
-  description: "한손으로 보는 내 주변 맛집, 데이트, 일상생활 등 다양한 장소를 한눈에 찾아보세요.",
+  title: "우리동네 핫플",
+  description: "지도에서 사용자 주변 카테고리 시설 정보를 확인할 수 있습니다.",
   openGraph: {
-    title: "MapSnap",
-    description: "한손으로 보는 내 주변 맛집, 데이트, 일상생활 등 다양한 장소를 한눈에 찾아보세요.",
+    title: "우리동네 핫플",
+    description:
+      "지도에서 사용자 주변 카테고리 시설 정보를 확인할 수 있습니다.",
     url: "https://holo-psi.vercel.app/map",
   },
 };
-
 const Map = () => {
   return (
-    <>
+    <div className="flex justify-center items-center w-full h-full">
       <KakaoMap />
-    </>
+    </div>
   );
 };
 
