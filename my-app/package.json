@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@tanstack/react-query": "^5.81.2",
     "next": "15.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-spring-bottom-sheet": "^3.4.1"
+    "react-spring-bottom-sheet": "^3.4.1",
+    "swiper": "^11.2.8"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
