@@ -1,6 +1,6 @@
 "use client";
 
-import ErrorImage from "@/assets/images/common/error_image.png";
+import ErrorImage from "@/assets/common/error_image.png";
 import Image from "next/image";
 import Link from "next/link";
 

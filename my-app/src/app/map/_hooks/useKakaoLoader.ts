@@ -16,6 +16,7 @@ const useKakaoLoader = () => {
       setKakaoLoading(false);
     }
     if (error) {
+      console.error("카카오 맵 로딩 에러:", error);
       throw new Error("카카오 맵 API를 불러오는데 실패하였습니다.");
     }
   }, [loading, error, setKakaoLoading]);
