@@ -1,6 +1,4 @@
-
 "use client";
-
 
 import useButtonMouseEvent from "@/app/map/_hooks/useButtonMouseEvent";
 import useScrollIntoViewCategoryBtn from "@/app/map/_hooks/useScrollIntoViewCategoryBtn";
@@ -35,7 +33,7 @@ const CategoryButtons = ({
     setCategory,
     setSelectedPlace,
     setPlaceDetail,
-    setSelectedCategory,
+    setSelectedCategory
   );
   const { scrollRef, handleMouseDown, handleMouseMove, handleMouseUp } =
     useButtonMouseEvent();
@@ -45,12 +43,13 @@ const CategoryButtons = ({
       {/* 페이지 제목 */}
       <h1
         className={clsx(
-          "common-title mx-5 my-4 lg:mx-0",
-          isMain && "!text-[22px]",
+          "common-title mx-5 my-4 lg:mx-0 font-extrabold text-3xl",
+          isMain && "!text-[22px]"
         )}
       >
         {/* 우리동네 핫플 */}
-        찾고싶은 장소가 한손에
+        찾고싶은 장소를 한손에{" "}
+        <span className="text-orange-500 font-extrabold text-4xl">MapSnap</span>
       </h1>
 
       {/* 버튼 카테고리 컨테이너 */}
@@ -58,7 +57,7 @@ const CategoryButtons = ({
         ref={scrollRef}
         className={clsx(
           "mx-5 flex overflow-x-auto [&::-webkit-scrollbar]:hidden",
-          isMain ? "lg:mx-0" : "lg:m-0 lg:mr-9 lg:gap-2",
+          isMain ? "lg:mx-0" : "lg:m-0 lg:mr-9 lg:gap-2"
         )}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
@@ -78,8 +77,12 @@ const CategoryButtons = ({
                 ? ""
                 : "lg:mb-6 lg:flex lg:flex-none lg:items-center lg:justify-center lg:rounded-[4px] lg:border lg:px-4 lg:py-2 lg:after:hidden",
               selectedCategory === cate.name // 선택한 카테고리 버튼에 적용할 style
-                ? `text-primary-800 after:absolute after:bottom-0 after:h-[4px] after:w-full after:rounded-3xl after:bg-primary-500 ${isMain ? "" : "lg:border-primary-800 lg:bg-primary-50 lg:text-primary-800"}`
-                : `${isMain ? "" : "lg:border-base-500 lg:text-base-700"}`,
+                ? `text-primary-800 after:absolute after:bottom-0 after:h-[4px] after:w-full after:rounded-3xl after:bg-primary-500 ${
+                    isMain
+                      ? ""
+                      : "lg:border-primary-800 lg:bg-primary-50 lg:text-primary-800"
+                  }`
+                : `${isMain ? "" : "lg:border-base-500 lg:text-base-700"}`
             )}
             onClick={() => onClickMoveCategoryBtn(cate, index)} // scrollIntoView를 적용하기 위한 함수
           >
@@ -88,14 +91,14 @@ const CategoryButtons = ({
                 "mb-3 flex h-14 flex-col items-center justify-between whitespace-nowrap",
                 isMain ? "" : "lg:mb-0 lg:flex lg:h-auto lg:flex-row lg:gap-2",
                 cate.id === 7 ? "" : "px-4",
-                isMain ? "" : "lg:px-0",
+                isMain ? "" : "lg:px-0"
               )}
             >
               <div
                 className={clsx(
                   "flex items-center p-2",
                   isMain ? "" : "lg:p-0",
-                  selectedCategory === cate.name ? "rounded bg-primary-50" : "",
+                  selectedCategory === cate.name ? "rounded bg-primary-50" : ""
                 )}
               >
                 <cate.img />
@@ -108,7 +111,7 @@ const CategoryButtons = ({
       <div
         className={clsx(
           "border-b-2 border-primary-100",
-          isMain ? "mb-4 lg:mx-0" : "lg:border-none",
+          isMain ? "mb-4 lg:mx-0" : "lg:border-none"
         )}
       ></div>
     </>
