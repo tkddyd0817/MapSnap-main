@@ -6,6 +6,7 @@ import MapContainer from "@/app/map/_components/MapContainer";
 import PlaceList from "@/app/map/_components/PlaceList";
 import SkeletonMap from "@/app/map/_components/SkeletonMap";
 import useCategoriesSearch from "@/app/map/_hooks/useCategoriesSearch";
+
 import useKakaoLoader from "@/app/map/_hooks/useKakaoLoader";
 import useKakaoMap from "@/app/map/_hooks/useKakaoMap";
 

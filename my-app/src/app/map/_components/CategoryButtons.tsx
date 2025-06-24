@@ -1,10 +1,12 @@
 
 "use client";
 
+
 import useButtonMouseEvent from "@/app/map/_hooks/useButtonMouseEvent";
 import useScrollIntoViewCategoryBtn from "@/app/map/_hooks/useScrollIntoViewCategoryBtn";
 import type { Place } from "@/app/map/_types/map";
 import { MAP_CATEGORIES } from "@/app/map/constants/categories";
+
 import clsx from "clsx";
 import { useState, type Dispatch, type SetStateAction } from "react";
 

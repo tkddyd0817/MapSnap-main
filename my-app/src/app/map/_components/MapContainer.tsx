@@ -1,6 +1,4 @@
-
 "use client";
-
 
 import MapControls from "@/app/map/_components/MapControls";
 import useKakaoMap from "@/app/map/_hooks/useKakaoMap";
@@ -60,7 +58,7 @@ const MapContainer = ({
 
   // 검색된 마커들 중 특정 마커를 클릭했을 때 맵 확대
   const onClickCurrentMarker = (
-    place: kakao.maps.services.PlacesSearchResultItem,
+    place: kakao.maps.services.PlacesSearchResultItem
   ) => {
     if (isMain) {
       router.push("/map");
@@ -95,7 +93,7 @@ const MapContainer = ({
     <div
       className={clsx(
         "relative h-full w-full lg:w-[1048px]",
-        isMain && "lg:w-full",
+        isMain && "lg:w-full"
       )}
     >
       <Map

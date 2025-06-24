@@ -1,6 +1,6 @@
-import { Metadata } from 'next';
-import React from 'react'
 
+import KakaoMap from "@/app/map/_components/KakaoMap";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "MapSnap",
@@ -12,10 +12,12 @@ export const metadata: Metadata = {
   },
 };
 
-function page() {
+const Map = () => {
   return (
-    <div>page</div>
-  )
-}
+    <>
+      <KakaoMap />
+    </>
+  );
+};
 
-export default page
+export default Map;

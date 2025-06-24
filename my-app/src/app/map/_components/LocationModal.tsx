@@ -3,7 +3,8 @@
 
 import type { ModalContent } from "@/app/map/_types/modal";
 import { getModalContent } from "@/app/map/constants/modalContent";
-import CloseIcon from "@/assets/images/common/close-icon.svg";
+
+
 import {
   useLocationModalStore,
   type LocationModalType,
