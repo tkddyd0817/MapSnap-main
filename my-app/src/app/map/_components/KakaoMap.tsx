@@ -5,6 +5,7 @@ import CategorySkeleton from "@/app/map/_components/CategorySkeleton";
 import MapContainer from "@/app/map/_components/MapContainer";
 import PlaceList from "@/app/map/_components/PlaceList";
 import SkeletonMap from "@/app/map/_components/SkeletonMap";
+import SpotSearchBar from "@/app/map/_components/SpotSearchBar";
 import useCategoriesSearch from "@/app/map/_hooks/useCategoriesSearch";
 
 import useKakaoLoader from "@/app/map/_hooks/useKakaoLoader";
@@ -43,8 +44,23 @@ const KakaoMap = () => {
     selectedMarkerId,
   } = useCategoriesSearch(mapCenter);
 
+  const handleSearch = (keyword: string) => {
+    if (!window.kakao || !window.kakao.maps) return;
+    const ps = new window.kakao.maps.services.Places();
+    ps.keywordSearch(keyword, (data, status) => {
+      if (status === window.kakao.maps.services.Status.OK && data.length > 0) {
+        const { y, x } = data[0];
+        setMapCenter({ lat: parseFloat(y), lng: parseFloat(x) });
+      } else {
+        alert("검색 결과가 없습니다.");
+      }
+    });
+  };
+
+
   return (
     <>
+    <SpotSearchBar onSearch={handleSearch}/>
       <div className="h-[calc(100vh-124px)] lg:ml-28 lg:h-[65vh]">
         {kakaoLoading ? (
           <div className="h-full w-full lg:mt-28">

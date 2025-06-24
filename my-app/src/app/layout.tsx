@@ -1,8 +1,6 @@
 import "@/app/globals.css";
 import MainContainer from "@/components/layout/MainContainer";
-
 import TQProvider from "@/components/providers/TQProvider";
-
 import type { Metadata } from "next";
 import Script from "next/script";
 import "swiper/css";
@@ -10,14 +8,17 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export const metadata: Metadata = {
-  title: "HOLO",
-  description: "1인가구를 위한 정보 제공 서비스, 나 HOLO 산다!",
+  title: "MapSnap",
+  description:
+    "한손으로 보는 내 주변 맛집, 데이트, 일상생활 등 다양한 장소를 한눈에 찾아보세요.",
   openGraph: {
-    title: "HOLO",
-    description: "1인가구를 위한 정보 제공 서비스, 나 HOLO 산다!",
-    url: `${process.env.NEXT_PUBLIC_API_URL}`,
+    title: "MapSnap",
+    description:
+      "한손으로 보는 내 주변 맛집, 데이트, 일상생활 등 다양한 장소를 한눈에 찾아보세요.",
+    url: "https://holo-psi.vercel.app/map",
   },
 };
+
 
 const RootLayout = ({
   children,
